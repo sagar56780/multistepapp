@@ -8,7 +8,7 @@ import FormFour from './FormFour'
  
 const App = () => {
 
-  let [index,setIndex]=useState(1);
+  let [index,setIndex]=useState(3);
   let incrementIndex=()=>{
     setIndex(index+1);
     console.log("hello");
@@ -16,20 +16,21 @@ const App = () => {
   let decrementIndex=()=>{
     setIndex(index-1);
   }
-  const forms = [
-    { path: '/', component: <FormOne next={incrementIndex} /> },
-    { path: '/form2', component: <FormTwo next={incrementIndex} back={decrementIndex} /> },
-    { path: '/form3', component: <FormThree next={incrementIndex} back={decrementIndex} /> },
-    { path: '/form4', component: <FormFour  next={incrementIndex} back={decrementIndex}/> }
-  ];
+
   return (
     <div className="container">
          <section>
             <Sidebar/>
+            <div className='info-container'>
              <BrowserRouter>
               <Routes>
-                <Route path={forms[0].path} element={forms[index].component} ></Route>
+                <Route path={'/'} element={<FormOne></FormOne>} ></Route>
+                <Route path={'form2'} element={<FormTwo/>} ></Route>
+                <Route path={'form3'} element={<FormThree/>} ></Route>
+                <Route path={'form4'} element={<FormFour/>} ></Route>
+                
                  
+                
                 
 
 
@@ -37,6 +38,13 @@ const App = () => {
               </Routes>
               
           </BrowserRouter>
+          <div className='buttons'> <button > Back</button><button onClick>NEXT STEP</button></div>
+          </div>
+
+         
+
+                
+
             
         
        

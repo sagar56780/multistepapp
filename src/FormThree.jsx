@@ -1,8 +1,8 @@
 import React from 'react'
 import AddOns from './AddOns'
 
-const FormThree = (props) => {
-  let {next,back}=props;
+const FormThree = () => {
+
   return (
     <form className='form-three'>
     <h1>Pick add-ons</h1>
@@ -12,7 +12,6 @@ const FormThree = (props) => {
 
     <AddOns title='Customizable Profile' subtitle='Custom theme on your profile' month='3'/>
 
-    <div className='buttons'> <button onClick={back}> Back</button><button onClick={next}>NEXT STEP</button></div>
 
 
 </form>

@@ -12,7 +12,6 @@ const FormOne = (props) => {
     <input type="email" id='email' /><br /><br />
     <label htmlFor="phone">Phone Number</label><br />
     <input type="tel" id='phone' /><br /><br />
-    <div className='buttons'> <button > Back</button><button onClick={next}> NEXT STEP</button></div>
 
 
 </form>

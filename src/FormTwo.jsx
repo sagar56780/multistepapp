@@ -1,8 +1,8 @@
 import React from 'react'
 import PlanCard from './PlanCard'
 
-const FormTwo = (props) => {
-  let {next,back}=props;
+const FormTwo = () => {
+  
   return (
     <form>
       <h1>Personal info</h1>
@@ -16,7 +16,6 @@ const FormTwo = (props) => {
       <div className='slide-button-container'><h4>Monthly </h4><div className='slide-button' id='slide'><div className='slide-dot'></div></div><h4>Yearly</h4></div>
 
       <br /><br /><br /><br /><br />
-      <div className='buttons'> <button onClick={back}> Back</button><button onClick={next}>NEXT STEP</button></div>
 
 
     </form>
