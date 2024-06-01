@@ -4,3 +4,6 @@ import "./index.css"
 
 let root=createRoot(document.getElementById("root"));
 root.render(<App/>);
+
+
+const slidebutton=document.getElementById("slide");

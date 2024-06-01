@@ -1,12 +1,13 @@
 import React from 'react'
 
-const PlanCard = () => {
+const PlanCard = (props) => {
+  let {title,month,color}=props;
   return (
     <div className='card'>
-        <i className="fa-solid fa-gamepad"></i>
+        <i style={{background:color}} className="fa-solid fa-gamepad"></i>
         <br /><br />
-        <h5>Arcade</h5>
-        <p>$9/mo</p>
+        <h5>{title}</h5>
+        <p>${month}/mo</p>
 
     </div>
   )
