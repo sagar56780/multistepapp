@@ -1,6 +1,7 @@
 import React from 'react'
 
-const FormOne = () => {
+const FormOne = (props) => {
+  let {next}=props;
   return (
     <form>
     <h1>Personal info</h1>
@@ -11,7 +12,7 @@ const FormOne = () => {
     <input type="email" id='email' /><br /><br />
     <label htmlFor="phone">Phone Number</label><br />
     <input type="tel" id='phone' /><br /><br />
-    <div className='buttons'> <button> Back</button><button>NEXT STEP</button></div>
+    <div className='buttons'> <button > Back</button><button onClick={next}> NEXT STEP</button></div>
 
 
 </form>

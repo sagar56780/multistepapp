@@ -149,4 +149,32 @@ input{
   align-self: first baseline;
 
 }
+/* css of addons */
+.add-ons-container {
+  padding: 1em;
+  border: 2px solid black;
+  width: 80%;
+  height: 5em;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+  border-radius: .3em;
+        
+    }
+     .add-ons-info{
+      padding: 2em;
+      display: flex;
+      column-gap: 1em;
 
+      height: 100%;
+      width: 90%;
+      align-items: center;
+     }
+    .add-ons-checkbox{
+      height: 1.5em;
+      width: 1.5em;
+    }
+    /*css for fromthree */
+
+    
+  

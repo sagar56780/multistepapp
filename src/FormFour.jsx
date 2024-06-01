@@ -1,8 +1,16 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+
 const FormFour = () => {
   return (
-    <NavLink to={'formone'}> fromOne</NavLink>
+    <form>
+    <h1>Finishing up</h1>
+    <p>Double-check everything looks OK before confirming.</p> <br /><br />
+   
+    <div className='buttons'> <button> Back</button><button>Confirm</button></div>
+
+
+</form>
+    
   )
 }
 
