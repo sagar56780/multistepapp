@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +10,110 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  
+}
+.container{
+  height: 100vh;
+  width: 100vw;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+section{
+  
+  border-radius: 1em;
+  display: flex;
+  height: 90vh;
+  width: 70vw;
+  border: 2px solid black;
 }
+article{
+  border-radius: 1em;
+
+  background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+  margin: .3em;
+  height: 97%;
+  width: 30%;
+  border: solid blue ;
+}
+.step{
+  margin: 1em;
+
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+ 
+}
+.num{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  height: 2.5em;
+  width: 2.5em;
+  border: 2px solid black;
+  border-radius: 5em;
+}
+form{
+  margin: 1.5em 0 0 1.5em ;
+}
+input{
+  height: 3em;
+  width: 100%;
+  padding: .5em;
+  border-radius: .5em;
+
+}
+.buttons{
+  
+  height: 3em;
+  align-self: last baseline;
+  margin-bottom: 4em;
+  width:100%;
+   border-radius: .5em;
+   display: flex;
+   justify-content: space-between;
+  }
+  button{
+    width: 9em;
+    background: #121619;
+    color: white;
+    border:none;
+    border-radius: .5em;
+    padding: .5em;
+
+
+  }
+  .p-step{
+    font-weight: 600;
+  }
+  button:hover{
+   
+    background-color:#2F3029 ;
+  }
+  .card{
+   padding: 1em;
+   
+    border: 2px solid rgb(2, 2, 2);
+    border-radius: .5em;
+    height: 10em;
+    width: 9em;
+  }
+.fa-gamepad{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2em;
+  width: 2em;
+  background: #00C9A7;
+  border: 2px solid black;
+  border-radius: 5em;
+  align-self: first baseline;
+
+}
+
