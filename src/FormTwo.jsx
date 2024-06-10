@@ -4,7 +4,7 @@ import PlanCard from './PlanCard'
 const FormTwo = () => {
   
   return (
-    <form>
+    <form className='form2'>
       <h1>Personal info</h1>
       <p>Please provide your name, email address, and phone number.</p> <br /><br />
       <div className='plan-container'>

@@ -11,6 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
+  background-color:rgb(5, 35, 36) ;
   
 }
 .container{
@@ -27,13 +28,25 @@ section{
   border-radius: 1em;
   display: flex;
   height: 90vh;
+  color: white;
+
+
+
+
+
+
+
+
+
+  
   width: 70vw;
   border: 2px solid black;
+  background-image: linear-gradient(to top, #063342, #003951, #003d62, #004171, #004480, #00457f, #00467f, #00477e, #00446c, #003f55, #00373f, #012f2c);
 }
 article{
   border-radius: 1em;
 
-  background-color: #4158D0;
+
   background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
 
   margin: .3em;
@@ -68,18 +81,22 @@ form{
   margin: 1.5em 0 0 1.5em ;
   width: 100%;
 }
+.form2{
+  display: flex;
+  flex-direction: column;
+}
 input{
   height: 3em;
-  width: 95%;
+  width: 85%;
   padding: .5em;
   border-radius: .5em;
 
 }
 .info-container{
+  
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+
 }
 .buttons{
   
@@ -87,7 +104,8 @@ input{
   
   height: 3em;
   align-self: last baseline;
-  transform: translatex(-5em) translateY(15em);
+  transform: translatex(19.5em) translateY(-5em);
+
   
   width: 40%;
    border-radius: .5em;
@@ -145,6 +163,18 @@ input{
     background-color: rgb(4, 4, 4);
     border-radius: 50%;
   }
+  .nav-link{
+    text-decoration: none;
+  }
+  .active{
+    text-decoration: none;
+    background: cadetblue ;
+    .num{
+      background: #4158D0;
+      
+    }
+    
+  }
 
 .fa-gamepad{
   display: flex;
@@ -183,7 +213,7 @@ input{
       height: 1.5em;
       width: 1.5em;
     }
-    /*css for fromthree */
+    
 
     
   
