@@ -29,16 +29,6 @@ section{
   display: flex;
   height: 90vh;
   color: white;
-
-
-
-
-
-
-
-
-
-  
   width: 70vw;
   border: 2px solid black;
   background-image: linear-gradient(to top, #063342, #003951, #003d62, #004171, #004480, #00457f, #00467f, #00477e, #00446c, #003f55, #00373f, #012f2c);
@@ -104,10 +94,10 @@ input{
   
   height: 3em;
   align-self: last baseline;
-  transform: translatex(19.5em) translateY(-5em);
+  transform: translatex(18.5em) translateY(-4em);
 
   
-  width: 40%;
+  width: 38.5%;
    border-radius: .5em;
    display: flex;
    justify-content: space-between;

@@ -1,7 +1,6 @@
 import React from 'react'
 
-const FormOne = (props) => {
-  let {next}=props;
+const FormOne = () => {
   return (
     <form>
     <h1>Personal info</h1>
