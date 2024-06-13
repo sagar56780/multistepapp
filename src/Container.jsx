@@ -1,30 +1,23 @@
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 
 const Container = () => {
-  let [count, updateCount] = useState(0);
-  let nextPage = () => {
-    if (count < 4) {
-      updateCount(count + 1);
-    }
-  };
-  let backPage = () => {
-    if (count > 0) {
-      updateCount(count + -1);
-    }
-  };
+  let nav = useNavigate();
+
+
+
   return (
     <div className="container">
       <section>
-        <Sidebar count={count}></Sidebar>
+        <Sidebar count={nav}></Sidebar>
         <div className="info-container">
           <Outlet></Outlet>
         </div>
         <div className="buttons">
 
-          <button onClick={nextPage}> Back</button>
-          <button onClick={backPage}>NEXT STEP</button>
+          <button onClick={()=>nav(-1)}> Back</button>
+          <button onClick={()=>nav(+1)}>NEXT STEP</button>
         </div>
       </section>
     </div>
