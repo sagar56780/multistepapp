@@ -13,15 +13,15 @@ const Buttons = () => {
 
 
   }
-  let handleNext = (e) => {
-    e.preventDefault();
-    if (index < forms.length) {
-      index++;
-    }
-    nav(forms[index])
+  // let handleNext = (e) => {
+  //   e.preventDefault();
+  //   if (index < forms.length) {
+  //     index++;
+  //   }
+  //   nav(forms[index])
 
 
-  }
+  // }
 
 
 
@@ -29,7 +29,7 @@ const Buttons = () => {
     <div className="buttons">
 
       <button onClick={handleBack}> Back</button>
-      <button onClick={handleNext}>NEXT STEP</button>
+      <button  type='submit'>NEXT STEP</button>
     </div>
   )
 }
