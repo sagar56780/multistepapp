@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+
 import Sidebar from "./Sidebar";
 import { Outlet, useNavigate } from "react-router-dom";
 
@@ -14,11 +14,7 @@ const Container = () => {
         <div className="info-container">
           <Outlet></Outlet>
         </div>
-        <div className="buttons">
 
-          <button onClick={()=>nav(-1)}> Back</button>
-          <button onClick={()=>nav(+1)}>NEXT STEP</button>
-        </div>
       </section>
     </div>
   );

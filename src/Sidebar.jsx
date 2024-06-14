@@ -32,7 +32,7 @@ const Sidebar = (props) => {
       </NavLink>
   
     </article>
-  );
+  ); 
 };
 
 export default Sidebar;
