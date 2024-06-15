@@ -16,7 +16,7 @@ const AddOns = (props) => {
         </div>
            <div className="add-ons-price">+${month}/mo</div>
     </div>
-  
+
   
   </>
   )

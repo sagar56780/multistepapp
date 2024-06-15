@@ -1,10 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import FormFour from "./FormFour";
-import FormOne from "./FormOne";
-import FormThree from "./FormThree";
-import FormTwo from "./FormTwo";
+import FormFour from "./components/FormFour";
+import FormOne from "./components/FormOne";
+import FormThree from "./components/FormThree";
+import FormTwo from "./components/FormTwo";
 
-import Container from "./Container";
+import Container from "./components/Container";
+
 
 const App = () => {
 
@@ -34,6 +35,7 @@ const App = () => {
   ]);
   return (
     <>
+  
       {
         <RouterProvider router={router}>
           <Container router={router}></Container>
