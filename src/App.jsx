@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import FormFour from "./components/FormFour";
-import FormOne from "./components/FormOne";
-import FormThree from "./components/FormThree";
-import FormTwo from "./components/FormTwo";
+import FormFour from "./components/forms/FormFour";
+import FormOne from "./components/forms/FormOne";
+import FormThree from "./components/forms/FormThree";
+import FormTwo from "./components/forms/FormTwo";
 
 import Container from "./components/Container";
 

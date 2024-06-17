@@ -1,11 +1,11 @@
 import React from 'react'
-import AddOns from './AddOns'
-import Buttons from './Buttons'
+import AddOns from '../AddOns'
+import Buttons from '../Buttons'
 
 const FormThree = () => {
 
   return (
-    <form className='form-three'>
+    <form className='form-three' action='/form4'>
       <div className="form-container">
         <h1>Pick add-ons</h1>
         <p>Add-ons help enhance your gaminig experience.</p> <br /><br />

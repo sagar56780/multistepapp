@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 let index = 0;
 const Buttons = () => {
-
-
   let nav = useNavigate();
   let forms = ["/", "/form2", "/form3", "/form4"];
   let handleBack = (e) => {
@@ -14,11 +12,21 @@ const Buttons = () => {
     }
     nav(forms[index]);
   };
+  // let handleNext = (e) => {
+  //   e.preventDefault();
+  //   if (index < forms.length) {
+  //     index++;
+  //   }
+  //   console.log(index);
+  // };
 
   return (
     <div className="buttons">
       <button onClick={handleBack}> Back</button>
-      <button type="submit">NEXT STEP</button>
+      <button type="submit">
+   
+        NEXT STEP
+      </button>
     </div>
   );
 };

@@ -1,10 +1,16 @@
-import Buttons from "./Buttons";
-import PlanCard from "./PlanCard";
+import { useLocation, } from "react-router-dom";
+import Buttons from "../Buttons";
+import PlanCard from "../PlanCard";
 
 const FormTwo = () => {
+  let loaction = useLocation();
+  let { email, name, phone } = loaction.state || { email:'', name:'', phone:'' };
+  console.log(`email:${email},Name:${name},Phone:${phone}`);
+
+  // console.log(email);
   return (
     <>
-      <form className="form2">
+      <form className="form2" action="/form3">
         <div className="form-container">
           <h1>Personal info</h1>
           <p>Please provide your name, email address, and phone number.</p>{" "}
@@ -31,7 +37,6 @@ const FormTwo = () => {
         </div>
         <Buttons />
       </form>
- 
     </>
   );
 };

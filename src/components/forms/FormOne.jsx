@@ -1,8 +1,10 @@
-import React, { useState } from "react";
-import Buttons from "./Buttons";
 import axios from "axios";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Buttons from "../Buttons";
 
 const FormOne = ({ children }) => {
+  let nav = useNavigate();
   let [formOneData, updateData] = useState({
     email: "",
     name: "",
@@ -20,7 +22,7 @@ const FormOne = ({ children }) => {
   let handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:8080/insertUserInfo", formOneData)
+      .post("http://localhost:4000/userinfo", formOneData)
       .then((response) => {
         console.log("User created:", response.data);
       })
@@ -36,10 +38,11 @@ const FormOne = ({ children }) => {
         }
         console.log("Error config:", error.config);
       });
+    nav(`/form2`,{state:formOneData});
   };
   return (
     <>
-      <form action="form2" method="get" onSubmit={handleSubmit}>
+      <form action="/form2" method="get" onSubmit={handleSubmit}>
         <div className="form-container">
           <h1>Personal info</h1>
           <p>Please provide your name, email address, and phone number.</p>{" "}
