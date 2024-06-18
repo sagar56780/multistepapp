@@ -6,14 +6,13 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
-  background-color: #C4FCEF;
-
+  background-color: #c4fcef;
 }
 
 .container {
@@ -24,26 +23,22 @@ body {
   align-items: center;
 }
 
-
 section {
-
   border-radius: 1em;
   display: flex;
   height: 90vh;
   color: white;
   width: 70vw;
   border: 2px solid black;
-  background: #845EC2;
+  background: #845ec2;
 }
 
 article {
   border-radius: 1em;
 
-  background: #B39CD0;
+  background: #b39cd0;
 
-
-
-  margin: .3em;
+  margin: 0.3em;
   height: 97%;
   width: 40%;
   border: solid blue;
@@ -55,7 +50,6 @@ article {
   display: flex;
   align-items: center;
   column-gap: 1em;
-
 }
 
 .plan-container {
@@ -76,7 +70,6 @@ article {
 }
 
 form {
-
   display: flex;
   flex-direction: column;
   margin: 1.5em 0 0 1.5em;
@@ -98,22 +91,18 @@ input {
   height: 3em;
   width: 85%;
   padding: 1em;
-  border-radius: .5em;
-
+  border-radius: 0.5em;
 }
 
 .info-container {
-
   width: 100%;
   display: flex;
-
 }
 
 .buttons {
-
   height: 3em;
   width: 85%;
-  border-radius: .5em;
+  border-radius: 0.5em;
   display: flex;
   justify-content: space-between;
 }
@@ -123,10 +112,8 @@ button {
   background: #121619;
   color: white;
   border: none;
-  border-radius: .5em;
-  padding: .5em;
-
-
+  border-radius: 0.5em;
+  padding: 0.5em;
 }
 
 .p-step {
@@ -134,17 +121,7 @@ button {
 }
 
 button:hover {
-
-  background-color: #2F3029;
-}
-
-.card {
-  padding: 1em;
-
-  border: 2px solid rgb(2, 2, 2);
-  border-radius: .5em;
-  height: 10em;
-  width: 9em;
+  background-color: #2f3029;
 }
 
 .slide-button-container {
@@ -155,7 +132,6 @@ button:hover {
   align-items: center;
   justify-content: center;
   column-gap: 2em;
-
 }
 
 .slide-button {
@@ -168,7 +144,6 @@ button:hover {
 }
 
 .slide-dot {
-
   height: 100%;
   width: 50%;
   background-color: rgb(4, 4, 4);
@@ -184,10 +159,8 @@ button:hover {
   background: cadetblue;
 
   .num {
-    background: #4158D0;
-
+    background: #4158d0;
   }
-
 }
 
 .fa-gamepad {
@@ -196,26 +169,41 @@ button:hover {
   align-items: center;
   height: 3em;
   width: 3em;
-  background: #00C9A7;
+  background: #00c9a7;
   border: 2px solid black;
   border-radius: 5em;
   align-self: first baseline;
-
 }
 
 /* css of addons */
 .add-ons-container {
-  padding: .3em;
+  padding: 0.3em;
   border: 2px solid black;
   width: 85%;
   height: 5em;
   display: flex;
   align-items: center;
   margin-bottom: 2em;
-  border-radius: .3em;
-
+  border-radius: 0.3em;
 }
+.card {
+  padding: 1em;
 
+  border: 2px solid rgb(2, 2, 2);
+  border-radius: 0.5em;
+  height: 10em;
+  width: 9em;
+  width: 100%;
+  height: 100%;
+  background: #344c64;
+  cursor: pointer;
+}
+.card:hover {
+  border: 2px solid white;
+}
+.card:input[type=radio]:checked{
+  border: #4158d0;
+}
 
 
 .add-ons-info {
@@ -231,13 +219,9 @@ button:hover {
 .add-ons-checkbox {
   height: 1.5em;
   width: 1.5em;
-
 }
 
-
-@media only screen and (max-width:1100px) {
-
-
+@media only screen and (max-width: 1100px) {
   .plan-container {
     display: flex;
     flex-wrap: wrap;
@@ -247,15 +231,30 @@ button:hover {
   .card {
     display: flex;
     width: 100%;
-
-    justify-content: space-between;
     height: 5em;
+    justify-content: space-between;
   }
-  .add-ons-text{
+  .add-ons-text {
     font-size: small;
-
   }
-
-
-
 }
+.card {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+.card input[type="radio"] {
+  display: none;
+}
+
+
+.card input[type="radio"]:checked {
+  border-color: #007bff;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
+}
+
+.card:hover {
+  border-color: #0056b3;
+}
+
