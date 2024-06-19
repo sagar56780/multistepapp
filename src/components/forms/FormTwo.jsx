@@ -4,7 +4,7 @@ import PlanCard from "../PlanCard";
 import { useState } from "react";
 
 const FormTwo = (props) => {
-  let nav=useNavigate();
+  let nav = useNavigate();
   let [days, updateDays] = useState("mo");
   let [display, changeDisplay] = useState("none");
   let [price1, changePrice1] = useState(9);
@@ -31,7 +31,7 @@ const FormTwo = (props) => {
       changePrice3(price3 * 10);
     } else {
       div.style.justifyContent = "left";
-      updateDays("mo");
+      updateDays("mo");``
       changeDisplay("none");
 
       changePrice1(9);
@@ -41,18 +41,20 @@ const FormTwo = (props) => {
       updateboolean(true);
     }
   };
+  let s = "";
+  let cardData = s + data;
+  cardData = cardData.split(",");
   let handleClick = (e) => {
     e.preventDefault();
 
     updatedata(e.target.value);
-    console.log(data);
+    console.log(cardData);
   };
   // console.log(email);
   let handleSubmit = (e) => {
     e.preventDefault();
 
-    nav("/form3", data);
-
+    nav("/form3", { state: cardData });
   };
   return (
     <>

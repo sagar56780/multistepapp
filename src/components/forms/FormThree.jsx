@@ -1,8 +1,12 @@
 import React from 'react'
 import AddOns from '../AddOns'
 import Buttons from '../Buttons'
+import { useLocation } from 'react-router-dom'
 
 const FormThree = () => {
+  let location=useLocation();
+  let cardData=location.state;
+  console.log('plan:'+cardData);
 
   return (
     <form className='form-three' action='/form4'>

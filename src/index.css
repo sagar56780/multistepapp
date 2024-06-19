@@ -159,7 +159,8 @@ button:hover {
   background: cadetblue;
 
   .num {
-    background: #4158d0;
+    background: #02271e;
+    color: white;
   }
 }
 
@@ -177,7 +178,7 @@ button:hover {
 
 /* css of addons */
 .add-ons-container {
-  padding: 0.3em;
+  padding: 0.5em;
   border: 2px solid black;
   width: 85%;
   height: 5em;
@@ -185,6 +186,7 @@ button:hover {
   align-items: center;
   margin-bottom: 2em;
   border-radius: 0.3em;
+  background: #02271e;
 }
 .card {
   padding: 1em;
@@ -198,16 +200,21 @@ button:hover {
   background: #344c64;
   cursor: pointer;
 }
-.card:hover {
-  border: 2px solid white;
+
+.card input[type="radio"] {
+  display: none;
 }
-.card:input[type=radio]:checked{
-  border: #4158d0;
+.card input[type="radio"]:checked {
+  border-color: #007bff;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
 }
 
+.card:hover {
+  border-color: #0056b3;
+}
 
 .add-ons-info {
-  padding: 2em;
+  padding: 0.6em;
   display: flex;
   column-gap: 1em;
 
@@ -217,6 +224,7 @@ button:hover {
 }
 
 .add-ons-checkbox {
+  background: #02271e;
   height: 1.5em;
   width: 1.5em;
 }
@@ -238,23 +246,3 @@ button:hover {
     font-size: small;
   }
 }
-.card {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-}
-
-.card input[type="radio"] {
-  display: none;
-}
-
-
-.card input[type="radio"]:checked {
-  border-color: #007bff;
-  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
-}
-
-.card:hover {
-  border-color: #0056b3;
-}
-
