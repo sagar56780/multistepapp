@@ -13,6 +13,7 @@ const PlanCard = (props) => {
       days={days}
     >
       <input
+        id={id}
         onClick={handleClick}
         style={{ display: "none", position: "absolute" }}
         type="radio"

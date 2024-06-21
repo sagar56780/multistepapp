@@ -201,11 +201,16 @@ button:hover {
   display: none;
 }
 
-
 .card:hover {
   border-color: #0056b3;
 }
-
+.plan-card:checked {
+  /* background-color: #d3eafd;
+  /* Light blue background */
+  /* border: 2px solid #007bff; */
+  background: red;
+  /* Blue border */
+}
 .add-ons-info {
   padding: 0.6em;
   display: flex;
@@ -221,9 +226,8 @@ button:hover {
   height: 1.5em;
   width: 1.5em;
 }
- {
-  /* this is css for fetch data from FormThree  */
-}
+
+/* this is css for fetch data from FormThree  */
 
 .plan-card-data {
   display: flex;
