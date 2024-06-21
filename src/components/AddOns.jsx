@@ -1,12 +1,13 @@
 import React from "react";
 
 const AddOns = (props) => {
-  let { title, subtitle, month } = props;
+  let { title, subtitle, month, handleChange } = props;
   return (
     <>
       <label className="add-ons-container">
         <div className="add-ons-info">
           <input
+            onClick={handleChange}
             type="checkbox"
             className="add-ons-checkbox"
             value={[title, month]}

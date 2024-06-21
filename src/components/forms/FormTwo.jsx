@@ -31,7 +31,7 @@ const FormTwo = (props) => {
       changePrice3(price3 * 10);
     } else {
       div.style.justifyContent = "left";
-      updateDays("mo");``
+      updateDays("mo");
       changeDisplay("none");
 
       changePrice1(9);
@@ -53,12 +53,21 @@ const FormTwo = (props) => {
   // console.log(email);
   let handleSubmit = (e) => {
     e.preventDefault();
+    console.log(cardData);
+    if(cardData==null)
+      {
+        
+        window.alert('please select any of the card')
+      }
+      else{
+       nav("/form3", { state: cardData });
 
-    nav("/form3", { state: cardData });
+      }
+  
   };
   return (
     <>
-      <form className="form2" action="/form3" onSubmit={handleSubmit}>
+      <form className="form2" action="/form3" onSubmit={handleSubmit} >
         <div className="form-container">
           <h1 style={{ cursor: "none" }}>Select your plan</h1>
           <p>You have option of monthly or yearly billing</p> <br />
@@ -104,7 +113,7 @@ const FormTwo = (props) => {
           <br />
           <br />
         </div>
-        <Buttons />
+        <Buttons handleSubmit={handleSubmit} previousForm='/' confirm='Next' />
       </form>
     </>
   );

@@ -38,7 +38,7 @@ const FormOne = ({ children }) => {
         }
         console.log("Error config:", error.config);
       });
-    nav(`/form2`,{state:formOneData});
+    nav(`/form2`, { state: formOneData });
   };
   return (
     <>
@@ -76,7 +76,7 @@ const FormOne = ({ children }) => {
           />
           <br />
         </div>
-        <Buttons />
+        <Buttons handleSubmit={handleSubmit} confirm='Next' />
       </form>
     </>
   );
