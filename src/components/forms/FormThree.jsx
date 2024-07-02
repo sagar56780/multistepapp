@@ -11,11 +11,11 @@ const FormThree = () => {
   // using useState for collecting data from formThree
   const [isChecked, setIsChecked] = useState(false);
   const [addOnValue, updateAddOnvalue] = useState([cardData]);
-
+  var s = "";
   const handleChange = (e) => {
     setIsChecked(e.target.checked);
     // console.log(addOnValue);
-    let s = "";
+
     s = "" + e.target.value;
     s = s.split(",");
     // Manage checked values in an array
@@ -28,17 +28,19 @@ const FormThree = () => {
   console.log(addOnValue);
 
   let handleSubmit = (e) => {
-    e.preventDefault();
-    nav("/form4", { state: addOnValue });
+    console.log(s);
+  
+      e.preventDefault();
+      nav("/form4", { state: addOnValue });
+
   };
   return (
     <form className="form-three" onSubmit={handleSubmit}>
       <div className="form-container">
-        <h1>Pick add-ons</h1>
-        <p>Add-ons help enhance your gaminig experience.</p> <br />
-        <br />
-        <div className="add-main">
-          <AddOns
+        <h1>Pick add-ons</h1>  
+
+       <div className="add-on-container">
+        <AddOns 
             title="Online service"
             subtitle="Access to multiplayer games"
             month="1"
@@ -58,8 +60,13 @@ const FormThree = () => {
             handleChange={handleChange}
           />
         </div>
-      </div>
-      <Buttons handleSubmit={handleSubmit} previousForm='/form2' confirm='Next' />
+        </div>
+    
+      <Buttons
+        handleSubmit={handleSubmit}
+        previousForm="/form2"
+        confirm="Next"
+      />
     </form>
   );
 };

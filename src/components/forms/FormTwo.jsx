@@ -44,12 +44,21 @@ const FormTwo = (props) => {
   let s = "";
   let cardData = s + data;
   cardData = cardData.split(",");
+  let card=document.getElementsByClassName("card");
   let handleClick = (e) => {
-    console.log(e.target.id);
+    let specCard=document.getElementById(e.target.id);
+    for(let i=0;i<card.length;i++)
+      {
+      card[i].style.background ="#344c64"
+      card[i].style.border = "#0056b3"
+
+      }
+    specCard.style.background ="#3F634B"
+    specCard.style.border ="3px solid #0056b3"
   
 
     updatedata(e.target.value);
-    console.log(cardData);
+    // console.log(cardData);
   };
   // console.log(email);
   let [isChecked, updateChecked] = useState(true);
@@ -57,7 +66,7 @@ const FormTwo = (props) => {
    
     e.preventDefault();
     console.log(cardData);
-    if (cardData == null) {
+    if (cardData == '') {
       window.alert("please select any of the card");
     } else {
       nav("/form3", { state: cardData });

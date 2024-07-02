@@ -5,12 +5,12 @@ export var index = 0;
 const Buttons = (props) => {
   let {previousForm,confirm } = props;
   let nav = useNavigate();
-  let forms = ["/", "/form2", "/form3", "/form4"];
+  // let forms = ["/", "/form2", "/form3", "/form4"];
   let handleBack = (e) => {
-    // e.preventDefault();
-    // if (index > 0) {
-    //   index--;
-    // }
+  //   e.preventDefault();
+  //   if (index > 0) {
+  //     index--;
+  //   }
     nav(previousForm);
   };
 
