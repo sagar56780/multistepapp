@@ -17,7 +17,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
-  background-color: #c4fcef;
+  background-color: #f9f871;
 }
 
 .container {
@@ -33,21 +33,28 @@ section {
   display: flex;
   height: 90vh;
   color: white;
-  width: 70vw;
+  width: 60vw;
   border: 2px solid black;
-  background: #845ec2;
+  background: #62a377;
 }
 
 article {
-  border-radius: 1em;
-  background: #b39cd0;
-  margin: 0.3em;
-  height: 97%;
+  display: flex;
+  flex-direction: column;
+
+  background: #4a846f;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  height: 100%;
   width: 40%;
-  border: solid blue;
 }
 
 .step {
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #121619;
   margin: 1em;
   align-items: center;
   column-gap: 1em;
@@ -64,10 +71,12 @@ article {
   justify-content: center;
   align-items: center;
   font-weight: 800;
+
   height: 2.5em;
   width: 2.5em;
   border: 2px solid black;
   border-radius: 5em;
+  background: #a6cdc6;
 }
 
 form {
@@ -82,7 +91,7 @@ form {
   flex-direction: column;
   height: 80%;
 }
-.add-on-container{
+.add-on-container {
   margin-top: 2em;
   flex-direction: column;
   display: flex;
@@ -163,12 +172,14 @@ button:hover {
 
 .active {
   text-decoration: none;
-  background: cadetblue;
+  background: #62a377;
 
   .num {
     background: #02271e;
     color: white;
   }
+     border-top-left-radius: 1em;
+    
 }
 
 .fa-gamepad {
@@ -233,7 +244,22 @@ button:hover {
   height: 1.5em;
   width: 1.5em;
 }
+/* for form5 */
+.form5 {
+  margin: 0;
+}
 
+.thank-you-msg {
+  margin: 3em;
+  text-align: center;
+}
+.img-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* this is css for fetch data from FormThree  */
 
 .plan-card-data {
@@ -275,34 +301,30 @@ li {
     font-size: small;
   }
 }
-@media only screen and (max-width:500px) {
-  
-  #root{
+@media only screen and (max-width: 500px) {
+  #root {
     height: 100vh;
   }
-  .container{
+  .container {
     display: flex;
     flex-direction: column;
     width: 100vw;
     height: 100%;
   }
-  section{
+  section {
     height: 100%;
     width: 100%;
     border: none;
     border-radius: 0;
   }
-  article{
+  article {
     margin: 0;
     border-radius: 0;
     border: none;
     height: 20%;
     width: 100%;
     display: flex;
-
+    flex-direction:row;
   }
-
-
-
-
+  
 }

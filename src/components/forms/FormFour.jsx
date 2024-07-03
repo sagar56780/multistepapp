@@ -1,17 +1,23 @@
 import React from "react";
 import Buttons from "../Buttons";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const FormFour = () => {
+  let nav=useNavigate();
   let sum = 0;
   // fetching data from formTheee
   let location = useLocation();
   let formFoureData = location.state;
 
   console.log(formFoureData);
+  let handleSubmit=()=>{
+    console.log('submit ');
+
+    nav('/form5');
+  }
 
   return (
-    <form className="form4">
+    <form className="form4" onSubmit={handleSubmit}>
       <div className="form-container">
         <h1>Finishing up</h1>
         <p>Double-check everything looks OK before confirming.</p> <br />
