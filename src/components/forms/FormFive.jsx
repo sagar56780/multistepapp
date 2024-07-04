@@ -9,7 +9,7 @@ const FormFive = () => {
           <div className="form-container">
             <div className='img-container' > <img  src={thankyou} alt="" height="70%" width="40%" /></div>
             <div className='thank-you-msg'>
-                  <h3>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</h3>
+                  <h3>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support sagat56780@gmail.com.</h3>
                   
             </div>
           </div>
