@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Buttons from "../Buttons";
 
-const FormOne = ({ children }) => {
+const FormOne = () => {
   let nav = useNavigate();
-  let [formOneData, updateData] = useState({
+  let [formOneData, setFormOneData] = useState({
     email: "",
     name: "",
     phone: "",
@@ -13,7 +13,7 @@ const FormOne = ({ children }) => {
   let handleInput = (e) => {
     e.preventDefault();
 
-    updateData({
+    setFormOneData({
       ...formOneData,
       [e.target.id]: e.target.value,
     });
@@ -41,7 +41,6 @@ const FormOne = ({ children }) => {
     nav(`/form2`, { state: formOneData });
   };
   return (
-    <>
       <form action="/form2" method="get" onSubmit={handleSubmit}>
         <div className="form-container">
           <h1>Personal info</h1>
@@ -78,7 +77,6 @@ const FormOne = ({ children }) => {
         </div>
         <Buttons handleSubmit={handleSubmit} confirm='Next' />
       </form>
-    </>
   );
 };
 

@@ -5,40 +5,40 @@ import { useState } from "react";
 
 const FormTwo = (props) => {
   let nav = useNavigate();
-  let [days, updateDays] = useState("mo");
-  let [display, changeDisplay] = useState("none");
-  let [price1, changePrice1] = useState(9);
-  let [price2, changePrice2] = useState(12);
-  let [price3, changePrice3] = useState(15);
-  let [boolean, updateboolean] = useState(true);
+  let [days, setDays] = useState("mo");
+  let [display, setDisplay] = useState("none");
+  let [price1, setPrice1] = useState(9);
+  let [price2, setPrice2] = useState(12);
+  let [price3, setPrice3] = useState(15);
+  let [boolean, setBoolean] = useState(true);
 
   //fetching data from formOne
-  let location = useLocation();
-  let formOnedata = location.state;
+  // let location = useLocation();
+  // let formOnedata = location.state;
 
   let [data, updatedata] = useState([]);
   let handleSlide = () => {
     let div = document.getElementById("slide");
     if (boolean) {
       div.style.justifyContent = "right";
-      updateDays("yr");
+      setDays("yr");
 
-      changeDisplay("block");
+      setDisplay("block");
 
-      updateboolean(false);
-      changePrice1(price1 * 10);
-      changePrice2(price2 * 10);
-      changePrice3(price3 * 10);
+      setBoolean(false);
+      setPrice1(price1 * 10);
+      setPrice2(price2 * 10);
+      setPrice3(price3 * 10);
     } else {
       div.style.justifyContent = "left";
-      updateDays("mo");
-      changeDisplay("none");
+      setDays("mo");
+      setDisplay("none");
 
-      changePrice1(9);
-      changePrice2(10);
-      changePrice3(15);
+      setPrice1(9);
+      setPrice2(10);
+      setPrice3(15);
 
-      updateboolean(true);
+      setBoolean(true);
     }
   };
   let s = "";
@@ -47,21 +47,20 @@ const FormTwo = (props) => {
   let card=document.getElementsByClassName("card");
   let handleClick = (e) => {
     let specCard=document.getElementById(e.target.id);
-    for(let i=0;i<card.length;i++)
+    for(const element of card)
       {
-      card[i].style.background ="#344c64"
-      card[i].style.border = "#0056b3"
+      element.style.background ="#344c64"
+      element.style.border = "#0056b3"
 
       }
     specCard.style.background ="#3F634B"
     specCard.style.border ="3px solid #0056b3"
   
 
-    updatedata(e.target.value);
-    // console.log(cardData);
+
+    updatedata(e.target.value); 
   };
-  // console.log(email);
-  let [isChecked, updateChecked] = useState(true);
+
   let handleSubmit = (e) => {
    
     e.preventDefault();
@@ -73,7 +72,7 @@ const FormTwo = (props) => {
     }
   };
   return (
-    <>
+  
       <form className="form2" action="/form3" onSubmit={handleSubmit}>
         <div className="form-container">
           <h1 style={{ cursor: "none" }}>Select your plan</h1>
@@ -122,7 +121,7 @@ const FormTwo = (props) => {
         </div>
         <Buttons handleSubmit={handleSubmit} previousForm="/" confirm="Next" />
       </form>
-    </>
+    
   );
 };
 

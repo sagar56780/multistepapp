@@ -3,7 +3,7 @@ import React from "react";
 const AddOns = (props) => {
   let { title, subtitle, month, handleChange } = props;
   return (
-    <>
+
       <label className="add-ons-container">
         <div className="add-ons-info">
           <input
@@ -19,7 +19,7 @@ const AddOns = (props) => {
         </div>
         <div className="add-ons-price">+${month}/mo</div>
       </label>
-    </>
+  
   );
 };
 

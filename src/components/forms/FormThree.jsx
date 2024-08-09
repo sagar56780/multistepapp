@@ -10,17 +10,16 @@ const FormThree = () => {
   let cardData = location.state;
   // using useState for collecting data from formThree
   const [isChecked, setIsChecked] = useState(false);
-  const [addOnValue, updateAddOnvalue] = useState([cardData]);
-  var s = "";
+  const [addOnValue, setAddOnValue] = useState([cardData]);
+  let s = "";
   const handleChange = (e) => {
     setIsChecked(e.target.checked);
-    // console.log(addOnValue);
 
     s = "" + e.target.value;
     s = s.split(",");
     // Manage checked values in an array
     if (e.target.checked) {
-      updateAddOnvalue([...addOnValue, s]);
+      setAddOnValue([...addOnValue, s]);
     } else {
       addOnValue.pop(s);
     }
